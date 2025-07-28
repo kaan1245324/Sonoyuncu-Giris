@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>SonOyuncu Giriş</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url("5b7dc46d-7ddf-41d8-9099-6ba69d8e7620.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+    .login-panel {
+      max-width: 400px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+    .logo {
+      width: 120px;
+      margin: 0 auto 20px;
+    }
+    h2 {
+      margin: 0 0 10px;
+      color: #333;
+    }
+    p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #f57c00;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #fb8c00;
+    }
+    .links {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    .links a {
+      color: #666;
+      text-decoration: none;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #999;
+    }
+    select {
+      margin-top: 15px;
+      padding: 6px;
+      border-radius: 4px;
+    }
+    .recaptcha {
+      margin-top: 20px;
+      font-size: 11px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-panel">
+    <img src="https://i.imgur.com/9Jv1HjM.png" class="logo" alt="SonOyuncu Logo">
+    <h2>Giriş Yap</h2>
+    <p>SonOyuncu hesabına giriş yap.</p>
+    <input type="text" id="username" placeholder="Oyuncu Adı">
+    <input type="password" id="password" placeholder="Şifre">
+    <button onclick="girisYap()">Giriş Yap</button>
+    <div class="links">
+      <a href="#">Şifreni mi Unuttun?</a>
+    </div>
+    <div class="links" style="margin-top: 10px;">
+      <span>Hesabın yok mu?</span> <a href="#">Kayıt Ol</a>
+    </div>
+    <select>
+      <option>Dili Seçin</option>
+      <option>Türkçe</option>
+      <option>İngilizce</option>
+    </select>
+    <div class="recaptcha">Bu sayfa Google reCAPTCHA tarafından korunmaktadır.</div>
+    <div class="footer">© SonOyuncu Tasarım Demo - Öğrenme amaçlıdır</div>
+  </div>
+
+  <script>
+    function girisYap() {
+      const kullanici = document.getElementById("username").value;
+      const sifre = document.getElementById("password").value;
+
+      alert("Giriş butonuna basıldı.\n\nKullanıcı: " + kullanici + "\nŞifre: " + sifre);
+    }
+  </script>
+</body>
+</html>
